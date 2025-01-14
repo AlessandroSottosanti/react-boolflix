@@ -1,4 +1,3 @@
-// App.js
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
 import ShowList from "./pages/ShowList";

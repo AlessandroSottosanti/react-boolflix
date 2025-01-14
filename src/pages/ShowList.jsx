@@ -9,6 +9,7 @@ function ShowList() {
   return (
     <main className="upper-container">
       <div className="container">
+        
         {/* Lista Film */}
         {films.map((film) => (
           <AppCard key={film.id} item={film} type="film" apiUrlImgs={apiUrlImgs} />
