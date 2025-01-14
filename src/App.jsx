@@ -16,9 +16,10 @@ function App() {
 
   const apiUrlImgs = 'https://image.tmdb.org/t/p/';
 
-  // useEffect(() => {
-  //     getFilms();
-  // }, []);
+   useEffect(() => {
+      getFilms();
+      getTvSeries();
+   }, [query]);
 
   const getFilms = () => {
     axios.get(`${apiUrl + apiUrlFilms}`,
@@ -43,16 +44,21 @@ function App() {
         params:
         {
           api_key: "964c51a63d6009ef4bd55d2dd351416a",
-          query: query
+          query: query || 'one piece'
         }
       })
       .then((resp) => {
         console.log(resp.data.results)
         setTvSeries(resp.data.results);
       }).catch(() => {
-        alert("Errore nel caricamento dei film");
+        alert("Errore nel caricamento");
       });
   }
+
+  const handleSearch = (event) => {
+    setQuery(event.target.value);
+  }
+
 
   console.log(query);
   console.log(films);
@@ -62,7 +68,7 @@ function App() {
 
       <AppHeader
         query={query}
-        setQuery={setQuery}
+        handleSearch={handleSearch}
         getFilms={getFilms}
         getTvSeries={getTvSeries}
       />

@@ -1,5 +1,5 @@
 
-function AppHeader({query, setQuery, getFilms, getTvSeries}) {
+function AppHeader({query, handleSearch, getFilms, getTvSeries}) {
     
     return (
         <>
@@ -8,7 +8,7 @@ function AppHeader({query, setQuery, getFilms, getTvSeries}) {
                     <h1>BOOLFLIX</h1>
                 </div>
                 <div className="">
-                    <input name="search" type="text" value={query} placeholder='Cerca...' onChange={(event) => setQuery(event.target.value)} />
+                    <input name="search" type="text" value={query} placeholder='Cerca...' onChange={(event) => handleSearch(event)} />
                     <button onClick={() => { getFilms(); getTvSeries(); }}>Cerca</button>
                 </div>
             </nav>

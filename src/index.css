@@ -5,12 +5,12 @@
 }
 
 main{
-    background-color: rgb(18, 18, 48);
+    background-color: rgb(25, 25, 37);
 }
 
 .navbar{
-    background-color: rgb(4, 4, 32);
-    border-bottom: 1px solid rgb(36, 36, 65);
+    background-color: rgb(1, 1, 10);
+    border-bottom: 1px solid rgb(36, 36, 59);
     padding: 1.5em;
     display: flex;
     justify-content: space-between;
@@ -57,8 +57,8 @@ padding: 0;
 }
 
 .card{
-    background-color: rgb(4, 4, 32);
-    border: 1px solid rgb(36, 36, 65);
+    background-color: rgb(1, 1, 10);
+    border: 1px solid rgb(36, 36, 59);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -84,7 +84,7 @@ padding: 0;
 
 .img-poster{
     margin: 1em 0;
-    border: 1px solid rgb(36, 36, 65);
+    border: 1px solid rgb(36, 36, 59);
     border-radius: 10px;
 }
 
