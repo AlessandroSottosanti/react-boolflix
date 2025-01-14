@@ -8,14 +8,15 @@ function App() {
 
   const [query, setQuery] = useState("");
 
-  const apiUrlFilms = "https://api.themoviedb.org/3/search/movie?";
+  const apiUrl = "https://api.themoviedb.org";
+  const apiUrlFilms = "/3/search/movie?";
 
   useEffect(() => {
     //  getFilms();
   }, []);
 
   const getFilms = () => {
-    axios.get(`${apiUrlFilms}`,
+    axios.get(`${apiUrl + apiUrlFilms}`,
       {
         params:
         {
@@ -41,8 +42,10 @@ function App() {
 
       <div className='container'>
 
+        {/* Lista film */}
+
         {films.map((film) =>
-          <div className="card">
+          <div className="card" key={film.id}>
             <h1>Titolo: {film.title}</h1>
             <h2>Titolo Originale: {film.original_title}</h2>
            {film.original_language && <span className='font-mid flag-icon-container'>lingua originale: <img className='flag-icon' src={(film.original_language === 'it' || film.original_language === 'en') ? `images/${film.original_language}.png` : `images/placeholder.png`}></img></span> }
