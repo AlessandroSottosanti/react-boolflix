@@ -1,0 +1,34 @@
+.container{
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.font-mid{
+    font-size: 1.5rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 2em 0;
+    padding: 1em;
+    background-color: rgb(122, 122, 255);
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag-icon-container{
+    display: flex;
+    gap: 10px;
+}
+
+.flag-icon{
+    max-width: 40px;
+}
+
+.my{
+    margin: 1em 0;
+}
