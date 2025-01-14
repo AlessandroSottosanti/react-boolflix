@@ -1,3 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: rgb(10, 10, 37);
+}
+
+input{
+    background-color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button{
+    background-color: rgb(68, 68, 255);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(56, 56, 192);
+}
+
 .container{
     margin: 2em;
     display: flex;
@@ -13,11 +41,13 @@
     flex-direction: column;
     gap: 10px;
     margin: 2em 0;
-    padding: 1em;
-    background-color: rgb(122, 122, 255);
+    padding: 1em 2em;
+    background-color: rgb(21, 21, 80);
     color: white;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
+    text-align: center;
 }
 
 .flag-icon-container{
@@ -31,4 +61,9 @@
 
 .my{
     margin: 1em 0;
+}
+
+.img-poster{
+    margin: 1em 0;
+    border: 1px solid white;
 }
