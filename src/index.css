@@ -2,7 +2,16 @@
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+main{
     background-color: rgb(10, 10, 37);
+}
+
+.navbar{
+    background-color: rgb(21, 21, 80);
+    border-bottom: 1px solid rgb(34, 34, 131);
+    padding: 1em;
 }
 
 input{
@@ -11,6 +20,7 @@ input{
     padding: 10px;
     border-radius: 5px;
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 button{
@@ -26,8 +36,12 @@ button:hover{
     background-color: rgb(56, 56, 192);
 }
 
+.upper-container{
+padding: 0;
+}
+
 .container{
-    margin: 2em;
+    padding: 2em;
     display: flex;
     flex-direction: column;
 }
@@ -47,6 +61,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    border: 1px solid rgb(34, 34, 131);
     text-align: center;
 }
 
@@ -66,4 +81,5 @@ button:hover{
 .img-poster{
     margin: 1em 0;
     border: 1px solid white;
+    border-radius: 10px;
 }
