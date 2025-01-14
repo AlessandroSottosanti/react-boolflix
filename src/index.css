@@ -5,13 +5,20 @@
 }
 
 main{
-    background-color: rgb(10, 10, 37);
+    background-color: rgb(18, 18, 48);
 }
 
 .navbar{
-    background-color: rgb(21, 21, 80);
-    border-bottom: 1px solid rgb(34, 34, 131);
+    background-color: rgb(4, 4, 32);
+    border-bottom: 1px solid rgb(36, 36, 65);
     padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: red;
 }
 
 input{
@@ -23,7 +30,7 @@ input{
 }
 
 button{
-    background-color: rgb(68, 68, 255);
+    background-color: rgb(194, 0, 0);
     color: white;
     padding: 10px;
     border: none;
@@ -32,7 +39,7 @@ button{
 
 button:hover{
     cursor: pointer;
-    background-color: rgb(56, 56, 192);
+    background-color: rgb(136, 0, 0);
 }
 
 .upper-container{
@@ -50,17 +57,17 @@ padding: 0;
 }
 
 .card{
+    background-color: rgb(4, 4, 32);
+    border: 1px solid rgb(36, 36, 65);
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 2em 0;
     padding: 1em 2em;
-    background-color: rgb(21, 21, 80);
     color: white;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    border: 1px solid rgb(34, 34, 131);
     text-align: center;
 }
 
@@ -77,7 +84,7 @@ padding: 0;
 
 .img-poster{
     margin: 1em 0;
-    border: 1px solid white;
+    border: 1px solid rgb(36, 36, 65);
     border-radius: 10px;
 }
 
