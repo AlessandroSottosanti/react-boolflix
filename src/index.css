@@ -11,7 +11,7 @@ main{
 .navbar{
     background-color: rgb(21, 21, 80);
     border-bottom: 1px solid rgb(34, 34, 131);
-    padding: 1em;
+    padding: 1.5em;
 }
 
 input{
@@ -20,7 +20,6 @@ input{
     padding: 10px;
     border-radius: 5px;
     margin-right: 10px;
-    margin-top: 10px;
 }
 
 button{
@@ -74,12 +73,34 @@ padding: 0;
     max-width: 40px;
 }
 
-.my{
-    margin: 1em 0;
-}
+
 
 .img-poster{
     margin: 1em 0;
     border: 1px solid white;
     border-radius: 10px;
+}
+
+/* UTILITIES */
+
+.my{
+    margin: 1em 0;
+}
+
+.mr{
+    margin-right: 1em;
+}
+
+.m{
+    margin: 1em;
+}
+
+.d-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-white{
+    color: white;
 }

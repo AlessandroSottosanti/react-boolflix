@@ -4,8 +4,8 @@ function AppHeader({query, setQuery, getFilms, getTvSeries}) {
     return (
         <>
             <nav className="navbar">
-                <div>
-                    <input type="text" value={query} placeholder='Cerca...' onChange={(event) => setQuery(event.target.value)} />
+                <div className="d-flex">
+                    <input name="search" type="text" value={query} placeholder='Cerca...' onChange={(event) => setQuery(event.target.value)} />
                     <button onClick={() => { getFilms(); getTvSeries(); }}>invia</button>
                 </div>
             </nav>
