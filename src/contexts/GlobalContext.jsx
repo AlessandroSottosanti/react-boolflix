@@ -37,10 +37,17 @@ const GlobalProvider = ({ children }) => {
 
   const handleSearch = (event) => setQuery(event.target.value);
 
-  useEffect(() => {
+  const handleEnterKey = (event) => (event.key === "Enter") && getShows();
+
+
+  const getShows = () => {
     getFilms();
     getTvSeries();
-  }, [query]);
+  };
+
+  useEffect( () => {
+    getShows();
+  }, []);
 
   return (
     <GlobalContext.Provider
@@ -51,6 +58,8 @@ const GlobalProvider = ({ children }) => {
         handleSearch,
         getFilms,
         getTvSeries,
+        getShows,
+        handleEnterKey
       }}
     >
       {children}
