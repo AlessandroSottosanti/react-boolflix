@@ -40,13 +40,14 @@ function AppCard({ item, type, apiUrlImgs }) {
           </span>
         )}
 
-        {isFilm ? (
-          <div>Numero recensioni: {item.vote_count}</div>
-        ) : (
-          <p><strong>Descrizione:</strong> {item.overview}</p>
-        )}
+        {!isFilm && (
+                    <p><strong>Descrizione:</strong> {item.overview}</p>
 
-        <div className="font-mid m">
+        )}
+          <div>Numero recensioni: {item.vote_count}</div>
+
+        <div className="font-mid">
+          <div>Voto:</div>
           {arrayStars.map((star) => {
             return (
           (star <= avarage) ? <i class="fa-solid fa-star"></i> : <i class="fa-regular fa-star"></i>
