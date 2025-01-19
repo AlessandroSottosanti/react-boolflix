@@ -5,7 +5,7 @@ import axios from "axios";
 import { language } from "fontawesome";
 
 function ShowList() {
-  const { films, tvSeries, movieGenres, tvGenres } = useContext(GlobalContext);
+  const { films, tvSeries, movieGenres, tvGenres, filterFilmsByGenre, filterTvSeriesByGenre } = useContext(GlobalContext);
 
 
   const apiUrlImgs = "https://image.tmdb.org/t/p/";
@@ -30,11 +30,12 @@ function ShowList() {
       <div className="container">
         <div className="group-title">
           <h2 className="text-white">Film</h2>
+          
           {/* Select per i generi dei Film */}
-          <select onChange={(e) => filterFilmsByGenre(e.target.value)}>
+          <select onChange={(event) => filterFilmsByGenre(event)}>
             <option value="">Tutti i Generi</option>
             {movieGenres.map((genre) => (
-              <option key={genre.id} value={genre.name}>
+              <option key={genre.id} value={genre.id}>
                 {genre.name}
               </option>
             ))}
@@ -56,10 +57,10 @@ function ShowList() {
 
           <h2 className="text-white">Serie TV</h2>
 
-          <select onChange={(event) => filterTvSeriesByGenre(event.target.value)}>
+          <select onChange={(event) => filterTvSeriesByGenre(event)}>
             <option value="">Tutti i Generi</option>
             {tvGenres.map((genre) => (
-              <option key={genre.id} value={genre.name}>
+              <option key={genre.id} value={genre.id}>
                 {genre.name}
               </option>
             ))}

@@ -48,9 +48,9 @@ function AppCard({ item, type, apiUrlImgs }) {
 
         <div className="font-mid">
           <div>Voto:</div>
-          {arrayStars.map((star) => {
+          {arrayStars.map((star, index) => {
             return (
-          (star <= avarage) ? <i class="fa-solid fa-star"></i> : <i class="fa-regular fa-star"></i>
+          (star <= avarage) ? <i key={index} className="fa-solid fa-star"></i> : <i className="fa-regular fa-star"></i>
           )}
 
           )}
